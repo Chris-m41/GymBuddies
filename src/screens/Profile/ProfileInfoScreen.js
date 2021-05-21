@@ -25,6 +25,14 @@ export default class ProfileInfoScreen extends Component {
                     <Text style={styles.text}>Change Password</Text>
                     <TextInput style={styles.text} placeholder='*******' />
                 </View>
+                <View style={styles.cell}>
+                    <Text style={styles.text}>Height</Text>
+                    <TextInput style={styles.text} placeholder='5ft 8in'/>
+                </View>
+                <View style={styles.cell}>
+                    <Text style={styles.text}>Weight</Text>
+                    <TextInput style={styles.text} placeholder='160 lbs' />
+                </View>
                 <Button title='Save'/>
             </SafeAreaView>
         )
