@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, SafeAreaView, TouchableOpacity } from 'react-native'
-import Fitness from '@ovalmoney/react-native-fitness';
 
 export default class PermissionsScreen extends Component {
-
-    askForPermissions = () => {
-        Fitness.requestPermissions([{ kind: Fitness.PermissionKinds.Steps, access: Fitness.PermissionAccesses.Write }]) 
-    };
 
     render() {
         return (
