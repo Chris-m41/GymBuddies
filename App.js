@@ -7,6 +7,7 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import ProfileInfoScreen from './src/screens/Profile/ProfileInfoScreen';
 import GoalsScreen from './src/screens/Profile/GoalsScreen';
 import PermissionsScreen from './src/screens/Profile/PermissionsScreen';
+import CompetitionScreen from './src/CompetitionScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -23,10 +24,23 @@ function Profile() {
   );
 }
 
+function Competition() {
+  return (
+    <Stack.Navigator>
+      <Tab.Screen name="Weekly Rank" component={CompetitionScreen} />
+      {/* <Stack.Screen name="Personal Info" component={ProfileInfoScreen} />
+      <Stack.Screen name="Goals" component={GoalsScreen} />
+      <Stack.Screen name="Permissions" component={PermissionsScreen} /> */}
+    </Stack.Navigator>
+  );
+}
+
+
 export default function App() {
   return (
     <NavigationContainer>
        <Tab.Navigator>
+      <Tab.Screen name="Rank" component={Competition} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
     </NavigationContainer>
